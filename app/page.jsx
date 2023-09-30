@@ -2,7 +2,6 @@ import Topiclist from "@/components/Topiclist";
 
 
 export default function Home() {
-  // return <Topiclist/>
-  return <div>hello</div>
+  return <Topiclist/>
 }
 
