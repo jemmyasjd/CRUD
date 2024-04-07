@@ -5,6 +5,7 @@ import {HiPencilAlt} from "react-icons/hi";
 
 const getTopics = async () => {
     const apiURL = process.env.API_URL;
+    console.log(apiURL);
     try {
         const response = await fetch(`${apiURL}/api/topics`,{cache: "no-store"});
         const topics = await response.json();

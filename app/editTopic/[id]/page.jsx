@@ -3,6 +3,7 @@ import EditTopicForm from "@/components/EditTopicForm";
 
 const getTopicbyId = async (id) => {
     const apiURL = process.env.API_URL;
+    console.log(apiURL);
     try {
         const res = await fetch(`${apiURL}/api/topics/${id}`, {cache: "no-store"});
         if(!res.ok){
