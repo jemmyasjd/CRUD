@@ -8,6 +8,7 @@ export default function AddTopic(){
     const [description, setDescription] = useState("");
 
     const router = useRouter();
+    const apiURL = process.env.API_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,7 +16,7 @@ export default function AddTopic(){
         if(!title || !description) alert("Please add all fields");
 
         try {
-            const response = await fetch("/api/topics", {
+            const response = await fetch(`/api/topics`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
