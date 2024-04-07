@@ -6,10 +6,11 @@ export default function Removebtn({id}){
     const router = useRouter();
 
     const removeTopic = async () => {
+        const apiUrl = process.env.API_URL;
         const confirm = window.confirm("Are you sure you want to delete this topic?");
         if (confirm){
             try {
-                const response = await fetch(`/api/topics?id=${id}`, {
+                const response = await fetch(`${apiUrl}/api/topics?id=${id}`, {
                     method: "DELETE",     
                 });
             } catch (error) {
